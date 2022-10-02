@@ -35,7 +35,7 @@
 > Git Bash НЕ підтримує Ctrl+V, тому щоб вставити використовуйте Shift+Insert
 7. У файлі config.py впишіть токен вашого боту та посилання на сайт університету у відповідні змінні
 8. У свому репозиторії на сайті GitHub у "Settings" -> "Danger Zone" (у самому низу) -> "Change visibility" -> "Make private" -> напишіть виділений текст -> "I understand, change repository visibility"
-9. Просто впишіть у Git Bash ```cd botforvuilu.git/``` -> ```rm -rf .git``` -> ```git init``` -> ```git add .``` -> ```git commit -m "Initiall commit"``` -> ```git remote add origin %HTTPS_ВАШОГО_РЕПОЗИТОРІЮ%``` -> ```git push -u origin master```<br>
+9. Просто впишіть у Git Bash ```cd botforvuilu``` -> ```rm -rf .git``` -> ```git init``` -> ```git add .``` -> ```git commit -m "Initiall commit"``` -> ```git remote add origin %HTTPS_ВАШОГО_РЕПОЗИТОРІЮ%``` -> ```git push -u origin master```<br>
    9.1. Під час вписування ```git remote add origin %HTTPS_ВАШОГО_РЕПОЗИТОРІЮ%``` у вас може відкритись github, там просто підтвердіть регістрацію через браузер
 10. Зайдіть у [Railway](https://railway.app) та виберіть "Start a New Project" -> "Deploy from GitHub repo" -> "Login with GitHub" -> "Authorize Railway App" -> "Deploy from GitHub repo" -> "Verify Account"
 11. Введіть данні ввашої карти (з карти буде знято і повернено 1$, для підтвердження особистості)
