@@ -27,9 +27,10 @@ def text(message):
     if soup.find("div", {"class": "alert alert-info"}):
         bot.send_message(message.chat.id, "За вашим запитом записів не знайдено")
     else:
+        nl = "\n"
         h4 = soup.find("h4", {"class": "hidden-xs"})
         rows = soup.find_all("div", {"class": "col-md-6"})
-        msg = h4.text
+        msg = f"<b>{h4.text}</b>{nl}"
         for row in rows:
             if not row.h4 is None:
                 data = []
@@ -39,8 +40,13 @@ def text(message):
                     cols = trow.find_all('td')
                     cols = [ele.text.strip() for ele in cols]
                     data.append([ele for ele in cols if ele])
-                nl = "\n"
-                msg = f"{msg}{nl}{row.h4.text}{nl}{nl.join([' '.join(d) for d in data])}"
-        bot.send_message(message.chat.id, msg)
+                for nd, d in enumerate(data):
+                    d[0] += "."
+                    d[1] = d[1][:5] + " - " + d[1][5:]
+                    data[nd][0] = d[0]
+                    data[nd][1] = d[1]
 
-bot.polling()
+                msg = f"{msg}{nl}<b>{row.h4.text}</b>{nl}{nl}{nl.join([' '.join(d) for d in data])}{nl}"
+        bot.send_message(message.chat.id, msg, parse_mode="html")
+
+bot.infinity_polling()
