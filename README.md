@@ -25,7 +25,7 @@
    2.2. Введіть назву (немає різниці яку)<br>
    2.3. Нажміть "Create repository" нище<br>
    2.4. Скопіюйте/збережіть/запишіть https вашого проекту, це знадобиться потім<br>
-   <img src="images/im2.png" alt="im1" width=500/>
+   <img src="images/im2.png" alt="im2" width=500/>
 3. Зайдіть у [репозиторій бота](https://github.com/RoLO0u/botforvuilu) (де ви зараз, скоріше всього, знаходитесь)
 4. Завантажте [git](https://git-scm.com/downloads)
 5. Запустіть Git Bash<br>
